@@ -9,6 +9,14 @@
             <field name="domain">[('active','=',True),('stage_id.is_won','=',True)]</field>
             <field name="context">{'group_by': 'create_date:year'}</field>
         </record>
+        <record id="action_audit12_contratos_por_anio" model="ir.actions.act_window">
+            <field name="name">AUDIT 14 - Contratos por año</field>
+            <field name="res_model">crm.lead</field>
+            <field name="target">current</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('active','=',True),('stage_id.is_won','=',True)]</field>
+            <field name="context">{'group_by': 'create_date:year'}</field>
+        </record>
     </data>
 </odoo>
 
