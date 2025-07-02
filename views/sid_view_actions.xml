@@ -85,6 +85,7 @@
             <field name="res_model">stock.move</field>
             <field name="target">current</field>
             <field name="view_id" ref="stock_account.stock_valuation_layer_tree"/>
+            <field name="search_view_id" ref="stock.view_move_search"/>
             <field name="view_mode">tree,form</field>
             <field name="domain">[("stock_valuation_layer_ids.value","!=",0),("state","=","done")]</field>
             <field name="context">{}</field>
