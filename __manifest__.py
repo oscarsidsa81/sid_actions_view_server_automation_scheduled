@@ -5,7 +5,7 @@
     'summary': 'Acciones de todo el sistema',
     'description': 'Módulo con todas las acciones de todos los tipos de v15 personalizadas',
     'author': 'oscarsidsa81',
-    'depends': ['base'],
+    'depends': ['base','crm'],
     'data': [
         'views/sid_view_actions.xml',
     ],
