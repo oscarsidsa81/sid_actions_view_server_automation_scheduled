@@ -6,7 +6,7 @@
             <field name="res_model">crm.lead</field>
             <field name="target">current</field>
             <field name="view_mode">tree,form</field>
-            <field name="domain">["&amp;", ("active", "=", True), ("stage_id.is_won", "=", True)]</field>
+            <field name="domain">[&amp;, ("active", "=", True), ("stage_id.is_won", "=", True)]</field>
             <field name="context">{'group_by': 'create_date:year'}</field>
         </record>
         <record id="audit.sales_2022_inv_2023" model="ir.actions.act_window">
