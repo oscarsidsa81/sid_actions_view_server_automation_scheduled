@@ -7,7 +7,7 @@
     'author': 'oscarsidsa81',
     'depends': ['base'],
     'data': [
-        'view/sid_view_actions.xml',
+        'views/sid_view_actions.xml',
     ],
     'installable': True,
     'auto_install': True,
