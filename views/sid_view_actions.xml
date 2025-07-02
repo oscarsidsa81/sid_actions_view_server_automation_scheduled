@@ -15,7 +15,7 @@
             <field name="target">current</field>
             <field name="view_mode">tree,form</field>
             <field name="domain">[('state', 'not in', ('draft', 'sent', 'cancel')),"&amp;","&amp;
-                ",("opportunity_id.due_date_crm","&ge;","2022-01-01 00:00:00"),("opportunity_id.due_date_crm","&le;","2022-12-31 00:00:00"),("invoice_ids.invoice_date","&ge;","2023-01-01")]
+                ",("opportunity_id.due_date_crm","&#8805;","2022-01-01 00:00:00"),("opportunity_id.due_date_crm","&#8804;","2022-12-31 00:00:00"),("invoice_ids.invoice_date","&#8805;","2023-01-01")]
             </field>
             <field name="context">{}</field>
         </record>
@@ -25,8 +25,8 @@
             <field name="target">current</field>
             <field name="view_mode">tree,form</field>
             <field name="domain">[('state', 'not in', ('draft', 'sent', 'cancel')),"&amp;","&amp;
-                ",("opportunity_id.due_date_crm",">=","2023-01-01 00:00:00"),("opportunity_id.due_date_crm","<
-                =","2023-12-31 00:00:00"),("invoice_ids.invoice_date",">=","2024-01-01")]
+                ",("opportunity_id.due_date_crm","&#8805;","2023-01-01 00:00:00"),("opportunity_id.due_date_crm","&#8804;"
+                ,"2023-12-31 00:00:00"),("invoice_ids.invoice_date","&#8805;","2024-01-01")]
             </field>
             <field name="context">{}</field>
         </record>
@@ -35,7 +35,7 @@
             <field name="res_model">stock.valuation.layer</field>
             <field name="target">current</field>
             <field name="view_mode">tree,form</field>
-            <field name="domain">[('value', '!=', 0),('product_id.type', '=', 'product'), ("create_date", "<=",
+            <field name="domain">[('value', '!=', 0),('product_id.type', '=', 'product'), ("create_date", "&#8804;",
                 "2022-12-31"),("categ_id.parent_id.id","=",2)]
             </field>
             <field name="context">{}</field>
@@ -46,8 +46,8 @@
             <field name="res_model">stock.valuation.layer</field>
             <field name="target">current</field>
             <field name="view_mode">tree,form</field>
-            <field name="domain">[('value', '!=', 0),('product_id.type', '=', 'product'), ("create_date", ">=",
-                "2023-01-01"), ("create_date", "<=", "2023-12-31"),("categ_id.parent_id.id","=",2)]
+            <field name="domain">[('value', '!=', 0),('product_id.type', '=', 'product'), ("create_date", "&#8805;",
+                "2023-01-01"), ("create_date", "&#8804;", "2023-12-31"),("categ_id.parent_id.id","=",2)]
             </field>
             <field name="context">{}</field>
             <field name="view_id" ref="stock.valuation.layer.tree"/>
@@ -57,8 +57,8 @@
             <field name="res_model">stock.valuation.layer</field>
             <field name="target">current</field>
             <field name="view_mode">tree,form</field>
-            <field name="domain">[ ('value', '!=', 0), ('product_id.type', '=', 'product'), ("create_date", ">",
-                "2024-01-01"), ("create_date", "<=", "2024-12-31"), '|', '|', '|', '|', ('product_id.categ_id.id', '=',
+            <field name="domain">[ ('value', '!=', 0), ('product_id.type', '=', 'product'), ("create_date", "&gt;",
+                "2024-01-01"), ("create_date", "&#8804;", "2024-12-31"), '|', '|', '|', '|', ('product_id.categ_id.id', '=',
                 2), ('product_id.categ_id.parent_id.id', '=', 2), ('product_id.categ_id.parent_id.parent_id.id', '=',
                 2), ('product_id.categ_id.parent_id.parent_id.parent_id.id', '=', 2),
                 ('product_id.categ_id.parent_id.parent_id.parent_id.parent_id.id', '=', 2) ]
@@ -155,8 +155,8 @@
             <field name="res_model">sale.order.line</field>
             <field name="target">current</field>
             <field name="view_mode">tree,form</field>
-            <field name="domain">[('state','=','sale'),('invoice_lines.date', '<', '2025-01-01'), ('invoice_lines.date',
-                '>=', '2024-01-01')]
+            <field name="domain">[('state','=','sale'),('invoice_lines.date', '&lt;', '2025-01-01'), ('invoice_lines.date',
+                '&#8805;', '2024-01-01')]
             </field>
             <field name="context">{}</field>
             <field name="view_id" ref="sale.order.line.tree"/>
