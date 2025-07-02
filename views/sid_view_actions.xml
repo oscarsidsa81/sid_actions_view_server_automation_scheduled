@@ -89,7 +89,7 @@
             <field name="view_mode">tree,form</field>
             <field name="domain">[("stock_valuation_layer_ids.value","!=",0),("state","=","done")]</field>
             <field name="context">{}</field>
-            <field name="view_id" ref="stock.move.tree"/>
+            <field name="view_id" ref="stock.view_move_tree"/>
         </record>
         <record id="sid_activities_per_sale_line" model="ir.actions.act_window">
             <field name="name">Actividades Smart Sale Order</field>
@@ -123,7 +123,7 @@
             <field name="view_mode">tree,form</field>
             <field name="domain">[('state', 'not in', ('done','cancel','draft'))]</field>
             <field name="context">{}</field>
-            <field name="view_id" ref="stock.move.tree_ov"/>
+            <field name="view_id" ref="__export__.ir_ui_view_2510_a4dcf0a5"/>
         </record>
         <record id="sid_sales_bonds" model="ir.actions.act_window">
             <field name="name">Avales</field>
