@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <record id="audit_sales_per_year" model="ir.actions.act_window">
+        <record id="sid_audit_sales_per_year" model="ir.actions.act_window">
             <field name="name">AUDIT 14 - Contratos por año</field>
             <field name="res_model">crm.lead</field>
             <field name="target">current</field>
@@ -9,7 +9,7 @@
             <field name="domain" eval="['&amp;', ('active', '=', True), ('stage_id.is_won', '=', True)]"/>
             <field name="context">{'group_by': 'create_date:year'}</field>
         </record>
-        <record id="audit_sales_2022_inv_2023" model="ir.actions.act_window">
+        <record id="sid_audit_sales_2022_inv_2023" model="ir.actions.act_window">
             <field name="name">AUDIT 15 - Pedidos de 2022 - con facturas en 2023</field>
             <field name="res_model">sale.order</field>
             <field name="target">current</field>
@@ -19,7 +19,7 @@
             </field>
             <field name="context">{}</field>
         </record>
-        <record id="audit_sales_2022_inv_2024" model="ir.actions.act_window">
+        <record id="sid_audit_sales_2022_inv_2024" model="ir.actions.act_window">
             <field name="name">AUDIT 15 - Pedidos de 2023 - con facturas en 2024</field>
             <field name="res_model">sale.order</field>
             <field name="target">current</field>
@@ -30,7 +30,7 @@
             </field>
             <field name="context">{}</field>
         </record>
-        <record id="stock.audit_stock_valuation" model="ir.actions.act_window">
+        <record id="sid_audit8_stock_valuation_2022" model="ir.actions.act_window">
             <field name="name">AUDIT 8 - Valoración de stock - sólo 2022</field>
             <field name="res_model">stock.valuation.layer</field>
             <field name="target">current</field>
@@ -41,7 +41,7 @@
             <field name="context">{}</field>
             <field name="view_id" ref="stock.valuation.layer.tree"/>
         </record>
-        <record id="stock.audit_stock_valuation_2023" model="ir.actions.act_window">
+        <record id="sid_audit8_stock_valuation_2023" model="ir.actions.act_window">
             <field name="name">AUDIT 8 - Valoración de stock - sólo 2023</field>
             <field name="res_model">stock.valuation.layer</field>
             <field name="view_id" ref="stock.valuation.layer.tree"/>
@@ -53,7 +53,7 @@
             <field name="context">{}</field>
             <field name="view_id" ref="stock.valuation.layer.tree"/>
         </record>
-        <record id="stock.audit_stock_valuation_2024" model="ir.actions.act_window">
+        <record id="sid_audit8_stock_valuation_2024" model="ir.actions.act_window">
             <field name="name">AUDIT 8 - Valoración de stock - sólo 2024</field>
             <field name="res_model">stock.valuation.layer</field>
             <field name="view_id" ref="stock.valuation.layer.tree"/>
@@ -68,7 +68,7 @@
             <field name="context">{}</field>
             <field name="view_id" ref="stock.valuation.layer.tree"/>
         </record>
-        <record id="audit_stock_valuation_per_year" model="ir.actions.act_window">
+        <record id="sid_audit8_stock_valuation_per_year" model="ir.actions.act_window">
             <field name="name">AUDIT 8 - Valoración de stock - Por año</field>
             <field name="res_model">stock.valuation.layer</field>
             <field name="target">current</field>
@@ -80,7 +80,7 @@
             <field name="context">{'group_by': ['create_date:year', 'create_date:month'],'expand':1}</field>
             <field name="view_id" ref="stock.valuation.layer.tree"/>
         </record>
-        <record id="audit_stock_valuation_in_and_outs" model="ir.actions.act_window">
+        <record id="sid_audit_stock_valuation_in_and_outs" model="ir.actions.act_window">
             <field name="name">AUDIT 9 - Informe valorizado de entradas y salidas por año</field>
             <field name="res_model">stock.move</field>
             <field name="target">current</field>
@@ -90,7 +90,7 @@
             <field name="context">{}</field>
             <field name="view_id" ref="stock.move.tree"/>
         </record>
-        <record id="sale.activities_per_sale_line" model="ir.actions.act_window">
+        <record id="sid_activities_per_sale_line" model="ir.actions.act_window">
             <field name="name">Actividades Smart Sale Order</field>
             <field name="res_model">sale.activity</field>
             <field name="target">current</field>
@@ -98,7 +98,7 @@
             <field name="domain">[('sale_order_id', '=', active_id)]</field>
             <field name="context">{'group_by': ['stage']}</field>
         </record>
-        <record id="stock.activities_per_stock_move" model="ir.actions.act_window">
+        <record id="sid_activities_per_stock_move" model="ir.actions.act_window">
             <field name="name">Actividades de albarán</field>
             <field name="res_model">x_stock.move.tags</field>
             <field name="target">current</field>
@@ -107,7 +107,7 @@
             <field name="context">{}</field>
             <field name="view_id" ref="x_stock.move.tags"/>
         </record>
-        <record id="stock.stock_assign_stock_move_by_stock_picking" model="ir.actions.act_window">
+        <record id="sid_stock_assign_stock_move_by_stock_picking" model="ir.actions.act_window">
             <field name="name">Asignación</field>
             <field name="res_model">stock.move</field>
             <field name="target">current</field>
@@ -115,7 +115,7 @@
             <field name="domain">[]</field>
             <field name="context">{}</field>
         </record>
-        <record id="stock.stock_assign_stock_move_by_line" model="ir.actions.act_window">
+        <record id="sid_stock_assign_stock_move_by_line" model="ir.actions.act_window">
             <field name="name">Asignación por línea</field>
             <field name="res_model">stock.move</field>
             <field name="target">current</field>
@@ -124,7 +124,7 @@
             <field name="context">{}</field>
             <field name="view_id" ref="stock.move.tree_ov"/>
         </record>
-        <record id="bonds.sales_bonds" model="ir.actions.act_window">
+        <record id="sid_sales_bonds" model="ir.actions.act_window">
             <field name="name">Avales</field>
             <field name="res_model">x_bonds.orders</field>
             <field name="target">current</field>
@@ -132,7 +132,7 @@
             <field name="domain">[]</field>
             <field name="context">{}</field>
         </record>
-        <record id="stock.certificate_stock_picking" model="ir.actions.act_window">
+        <record id="sid_certificate_stock_picking" model="ir.actions.act_window">
             <field name="name">Certificados</field>
             <field name="res_model">stock.picking</field>
             <field name="target">current</field>
@@ -143,7 +143,7 @@
             <field name="context">{'group_by':'state'}</field>
             <field name="view_id" ref="stock.certificates.picking.tree"/>
         </record>
-        <record id="sale.invoice_control_sales_lines" model="ir.actions.act_window">
+        <record id="sid_invoice_control_sales_lines" model="ir.actions.act_window">
             <field name="name">Control de facturación</field>
             <field name="res_model">sale.order.line</field>
             <field name="target">current</field>
@@ -154,7 +154,7 @@
             <field name="context">{'location':(8,48)}</field>
             <field name="view_id" ref="sale.order.line.tree"/>
         </record>
-        <record id="sale.invoiced_2024_sale_line" model="ir.actions.act_window">
+        <record id="sid_invoiced_2024_sale_line" model="ir.actions.act_window">
             <field name="name">Control de facturación - Facturado en 2024</field>
             <field name="res_model">sale.order.line</field>
             <field name="target">current</field>
@@ -165,7 +165,7 @@
             <field name="context">{}</field>
             <field name="view_id" ref="sale.order.line.tree"/>
         </record>
-        <record id="stock.returns_and_errors" model="ir.actions.act_window">
+        <record id="sid_returns_and_errors" model="ir.actions.act_window">
             <field name="name">Devoluciones o errores</field>
             <field name="res_model">stock.quant</field>
             <field name="target">current</field>
@@ -175,7 +175,7 @@
             </field>
             <field name="context">{}</field>
         </record>
-        <record id="crm.attachments_per_lead" model="ir.actions.act_window">
+        <record id="sid_attachments_per_lead" model="ir.actions.act_window">
             <field name="name">Documentos adjuntos</field>
             <field name="res_model">ir.attachment</field>
             <field name="target">current</field>
@@ -183,7 +183,7 @@
             <field name="domain">[('res_id','=',active_id) , ('res_model','=','crm.lead')]</field>
             <field name="context">{'default_res_id': active_id, 'default_res_model': 'crm.lead'}</field>
         </record>
-        <record id="sale.attachments_per_sale" model="ir.actions.act_window">
+        <record id="sid_attachments_per_sale" model="ir.actions.act_window">
             <field name="name">Documentos adjuntos</field>
             <field name="res_model">ir.attachment</field>
             <field name="target">current</field>
@@ -191,7 +191,7 @@
             <field name="domain">[('res_id','=',active_id) , ('res_model','=','sale.order')]</field>
             <field name="context">{'default_res_id': active_id, 'default_res_model': 'sale.order'}</field>
         </record>
-        <record id="purchase.attachments_per_purchase" model="ir.actions.act_window">
+        <record id="sid_attachments_per_purchase" model="ir.actions.act_window">
             <field name="name">Documentos de compra</field>
             <field name="res_model">ir.attachment</field>
             <field name="target">current</field>
@@ -199,7 +199,7 @@
             <field name="domain">[('res_id','=',active_id) , ('res_model','=','purchase.order')]</field>
             <field name="context">{'default_res_id': active_id, 'default_res_model': 'purchase.order'}</field>
         </record>
-        <record id="stock.attachments_per_stock_picking" model="ir.actions.act_window">
+        <record id="sid_attachments_per_stock_picking" model="ir.actions.act_window">
             <field name="name">Documentos de transferencias</field>
             <field name="res_model">ir.attachment</field>
             <field name="target">current</field>
@@ -207,7 +207,7 @@
             <field name="domain">[('res_id','=',active_id) , ('res_model','=','stock.picking')]</field>
             <field name="context">{'default_res_id': active_id, 'default_res_model': 'stock.picking'}</field>
         </record>
-        <record id="stock.stock_picking_deliveries_project_team" model="ir.actions.act_window">
+        <record id="sid_stock_picking_deliveries_project_team" model="ir.actions.act_window">
             <field name="name">Entregas Proyectos</field>
             <field name="res_model">stock.picking</field>
             <field name="target">current</field>
@@ -218,7 +218,7 @@
             <field name="context">{'group_by' :'priority'}</field>
             <field name="view_id" ref="stock.entregas.picking"/>
         </record>
-        <record id="stock.stock_picking_deliveries_puertollano" model="ir.actions.act_window">
+        <record id="sid_stock_picking_deliveries_puertollano" model="ir.actions.act_window">
             <field name="name">Entregas Puertollano</field>
             <field name="res_model">stock.picking</field>
             <field name="target">current</field>
@@ -229,7 +229,7 @@
             <field name="context">{'group_by' :'state'}</field>
             <field name="view_id" ref="stock.entregas.ptllo.picking.tree"/>
         </record>
-        <record id="stock.stock_picking_deliveries_madrid" model="ir.actions.act_window">
+        <record id="sid_stock_picking_deliveries_madrid" model="ir.actions.act_window">
             <field name="name">Entregas y Devoluciones Madrid</field>
             <field name="res_model">stock.picking</field>
             <field name="target">current</field>
@@ -240,7 +240,7 @@
             <field name="context">{'group_by' :'state'}</field>
             <field name="view_id" ref="stock.entregas.picking.tree"/>
         </record>
-        <record id="sale.sale_order_lines" model="ir.actions.act_window">
+        <record id="sid_sale_order_lines" model="ir.actions.act_window">
             <field name="name">Líneas de pedido</field>
             <field name="res_model">purchase.order.line</field>
             <field name="target">current</field>
@@ -248,7 +248,7 @@
             <field name="domain">[('order_id', '=', active_id)]</field>
             <field name="context">{'search_default_order_id': active_id,'default_order_id': active_id}</field>
         </record>
-        <record id="documents.sale_dossier" model="ir.actions.act_window">
+        <record id="sid_sale_dossier" model="ir.actions.act_window">
             <field name="name">OV - Dossier</field>
             <field name="res_model">documents.document</field>
             <field name="target">current</field>
@@ -256,7 +256,7 @@
             <field name="domain">[('folder_id.name', '=', record.quotations_id.name)]</field>
             <field name="context">{}</field>
         </record>
-        <record id="purchase.sid_purchase_order_lines" model="ir.actions.act_window">
+        <record id="sid_purchase_order_lines" model="ir.actions.act_window">
             <field name="name">OV - Líneas de Compra</field>
             <field name="res_model">purchase.order.line</field>
             <field name="target">current</field>
@@ -264,7 +264,7 @@
             <field name="domain">[('order_id', '=', active_id)]</field>
             <field name="context">{'search_default_order_id': active_id,'default_order_id': active_id}</field>
         </record>
-        <record id="sale.sid_sale_order_lines" model="ir.actions.act_window">
+        <record id="sid_sale_order_lines" model="ir.actions.act_window">
             <field name="name">OV - Líneas de Venta</field>
             <field name="res_model">sale.order.line</field>
             <field name="target">current</field>
@@ -272,7 +272,7 @@
             <field name="domain">[('order_id', '=', active_id)]</field>
             <field name="context">{'search_default_order_id': active_id,'default_order_id': active_id}</field>
         </record>
-        <record id="stock.sid_picking_madrid" model="ir.actions.act_window">
+        <record id="sid_picking_madrid" model="ir.actions.act_window">
             <field name="name">Picking Madrid</field>
             <field name="res_model">stock.picking</field>
             <field name="target">current</field>
@@ -283,7 +283,7 @@
             <field name="context">{'group_by' :['state']}</field>
             <field name="view_id" ref="stock.picking.picking.tree"/>
         </record>
-        <record id="documents.sid_dossier_sale_line" model="ir.actions.act_window">
+        <record id="sid_dossier_sale_line" model="ir.actions.act_window">
             <field name="name">Sales Order lines - Dossier</field>
             <field name="res_model">sale.order</field>
             <field name="target">current</field>
