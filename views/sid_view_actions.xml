@@ -15,8 +15,7 @@
             <field name="target">current</field>
             <field name="view_mode">tree,form</field>
             <field name="domain">[('state', 'not in', ('draft', 'sent', 'cancel')),"&amp;","&amp;
-                ",("opportunity_id.due_date_crm",">=","2022-01-01 00:00:00"),("opportunity_id.due_date_crm","<
-                =","2022-12-31 00:00:00"),("invoice_ids.invoice_date",">=","2023-01-01")]
+                ",("opportunity_id.due_date_crm","&ge;","2022-01-01 00:00:00"),("opportunity_id.due_date_crm","&le;","2022-12-31 00:00:00"),("invoice_ids.invoice_date","&ge;","2023-01-01")]
             </field>
             <field name="context">{}</field>
         </record>
