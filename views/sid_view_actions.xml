@@ -241,7 +241,7 @@
             <field name="context">{'group_by' :'state'}</field>
             <field name="view_id" ref="__export__.ir_ui_view_2331_e171f19e"/>
         </record>
-        <record id="sid_purchase_order_lines" model="ir.actions.act_window">
+        <record id="sid_purchase_order_lines_2" model="ir.actions.act_window">
             <field name="name">Líneas de pedido</field>
             <field name="res_model">purchase.order.line</field>
             <field name="target">current</field>
