@@ -32,6 +32,7 @@
         </record>
         <record id="audit_stock_valuation" model="ir.actions.act_window">
             <field name="name">AUDIT 8 - Valoración de stock - sólo 2022</field>
+            <field name="view_id" ref="stock.valuation.layer.tree"/>
             <field name="res_model">stock.valuation.layer</field>
             <field name="target">current</field>
             <field name="view_mode">tree,form</field>
@@ -44,6 +45,7 @@
         <record id="audit_stock_valuation_2023" model="ir.actions.act_window">
             <field name="name">AUDIT 8 - Valoración de stock - sólo 2023</field>
             <field name="res_model">stock.valuation.layer</field>
+            <field name="view_id" ref="stock.valuation.layer.tree"/>
             <field name="target">current</field>
             <field name="view_mode">tree,form</field>
             <field name="domain">[('value', '!=', 0),('product_id.type', '=', 'product'), ("create_date", "&#8805;",
@@ -55,6 +57,7 @@
         <record id="audit_stock_valuation_2024" model="ir.actions.act_window">
             <field name="name">AUDIT 8 - Valoración de stock - sólo 2024</field>
             <field name="res_model">stock.valuation.layer</field>
+            <field name="view_id" ref="stock.valuation.layer.tree"/>
             <field name="target">current</field>
             <field name="view_mode">tree,form</field>
             <field name="domain">[ ('value', '!=', 0), ('product_id.type', '=', 'product'), ("create_date", "&gt;",
@@ -70,6 +73,7 @@
             <field name="name">AUDIT 8 - Valoración de stock - Por año</field>
             <field name="res_model">stock.valuation.layer</field>
             <field name="target">current</field>
+            <field name="view_id" ref="stock.valuation.layer.tree"/>
             <field name="view_mode">tree,form</field>
             <field name="domain">[('value', '!=', 0),('product_id.type', '=',
                 'product'),("categ_id.parent_id.id","=",2)]
@@ -81,6 +85,7 @@
             <field name="name">AUDIT 9 - Informe valorizado de entradas y salidas por año</field>
             <field name="res_model">stock.move</field>
             <field name="target">current</field>
+            <field name="view_id" ref="stock.valuation.layer.tree"/>
             <field name="view_mode">tree,form</field>
             <field name="domain">[("stock_valuation_layer_ids.value","!=",0),("state","=","done")]</field>
             <field name="context">{}</field>
