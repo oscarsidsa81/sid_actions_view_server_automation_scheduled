@@ -106,7 +106,7 @@
             <field name="view_mode">tree,form</field>
             <field name="domain">[]</field>
             <field name="context">{}</field>
-            <field name="view_id" ref="x_stock.move.tags"/>
+            <field name="view_id" ref="__export__.ir_ui_view_2514_aa9af061"/>
         </record>
         <record id="sid_stock_assign_stock_move_by_stock_picking" model="ir.actions.act_window">
             <field name="name">Asignación</field>
@@ -142,7 +142,7 @@
                 'in', ('waiting', 'confirmed', 'assigned')) ]
             </field>
             <field name="context">{'group_by':'state'}</field>
-            <field name="view_id" ref="stock.certificates.picking.tree"/>
+            <field name="view_id" ref="__export__.ir_ui_view_2518_25348d81"/>
         </record>
         <record id="sid_invoice_control_sales_lines" model="ir.actions.act_window">
             <field name="name">Control de facturación</field>
@@ -153,7 +153,7 @@
                 'facturado'),('state','=','sale')]
             </field>
             <field name="context">{'location':(8,48)}</field>
-            <field name="view_id" ref="sale.order.line.tree"/>
+            <field name="view_id" ref="sale.view_order_line_tree"/>
         </record>
         <record id="sid_invoiced_2024_sale_line" model="ir.actions.act_window">
             <field name="name">Control de facturación - Facturado en 2024</field>
@@ -164,7 +164,7 @@
                 '&#8805;', '2024-01-01')]
             </field>
             <field name="context">{}</field>
-            <field name="view_id" ref="sale.order.line.tree"/>
+            <field name="view_id" ref="sale.view_order_line_tree"/>
         </record>
         <record id="sid_returns_and_errors" model="ir.actions.act_window">
             <field name="name">Devoluciones o errores</field>
@@ -217,7 +217,7 @@
                 7),('picking_type_id.id','=',(36,2))]
             </field>
             <field name="context">{'group_by' :'priority'}</field>
-            <field name="view_id" ref="stock.entregas.picking"/>
+            <field name="view_id" ref="__export__.ir_ui_view_2489_0f41672f"/>
         </record>
         <record id="sid_stock_picking_deliveries_puertollano" model="ir.actions.act_window">
             <field name="name">Entregas Puertollano</field>
@@ -228,7 +228,7 @@
                 [('state','in',('waiting','confirmed','assigned')),('sale_id.team_id.id','=',(6)),('picking_type_id.id','=',(36,8,12))]
             </field>
             <field name="context">{'group_by' :'state'}</field>
-            <field name="view_id" ref="stock.entregas.ptllo.picking.tree"/>
+            <field name="view_id" ref="__export__.ir_ui_view_2564_0becdedb"/>
         </record>
         <record id="sid_stock_picking_deliveries_madrid" model="ir.actions.act_window">
             <field name="name">Entregas y Devoluciones Madrid</field>
@@ -282,7 +282,7 @@
                 [('state','in',('waiting','confirmed','assigned')),('picking_type_id.id','in',(32,1,34,39))]
             </field>
             <field name="context">{'group_by' :['state']}</field>
-            <field name="view_id" ref="stock.picking.picking.tree"/>
+            <field name="view_id" ref="__export__.ir_ui_view_2508_7df82c11"/>
         </record>
         <record id="sid_dossier_sale_line" model="ir.actions.act_window">
             <field name="name">Sales Order lines - Dossier</field>
@@ -291,7 +291,7 @@
             <field name="view_mode">tree,form</field>
             <field name="domain">[('x_dossier','=', True)]</field>
             <field name="context">{'group_by': 'quotations_id','expand':1}</field>
-            <field name="view_id" ref="sale.order.tree"/>
+            <field name="view_id" ref="sale.view_order_tree"/>
         </record>
     </data>
 </odoo>
