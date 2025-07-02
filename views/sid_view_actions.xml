@@ -9,7 +9,7 @@
             <field name="domain" eval="['&amp;', ('active', '=', True), ('stage_id.is_won', '=', True)]"/>
             <field name="context">{'group_by': 'create_date:year'}</field>
         </record>
-        <record id="audit_sales_2022_inv_2023" model="ir.actions.act_window">
+        <record id="sale.audit_sales_2022_inv_2023" model="ir.actions.act_window">
             <field name="name">AUDIT 15 - Pedidos de 2022 - con facturas en 2023</field>
             <field name="res_model">sale.order</field>
             <field name="target">current</field>
@@ -19,7 +19,7 @@
             </field>
             <field name="context">{}</field>
         </record>
-        <record id="audit_sales_2022_inv_2024" model="ir.actions.act_window">
+        <record id="sale.audit_sales_2022_inv_2024" model="ir.actions.act_window">
             <field name="name">AUDIT 15 - Pedidos de 2023 - con facturas en 2024</field>
             <field name="res_model">sale.order</field>
             <field name="target">current</field>
@@ -30,10 +30,10 @@
             </field>
             <field name="context">{}</field>
         </record>
-        <record id="audit_stock_valuation" model="ir.actions.act_window">
+        <record id="stock.audit_stock_valuation" model="ir.actions.act_window">
             <field name="name">AUDIT 8 - Valoración de stock - sólo 2022</field>
             <field name="view_id" ref="stock.valuation.layer.tree"/>
-            <field name="res_model">stock.valuation.layer</field>
+            <field name="res_model">stock.valuation.layer.tree</field>
             <field name="target">current</field>
             <field name="view_mode">tree,form</field>
             <field name="domain">[('value', '!=', 0),('product_id.type', '=', 'product'), ("create_date", "&#8804;",
@@ -42,7 +42,7 @@
             <field name="context">{}</field>
             <field name="view_id" ref="stock.valuation.layer.tree"/>
         </record>
-        <record id="audit_stock_valuation_2023" model="ir.actions.act_window">
+        <record id="stock.audit_stock_valuation_2023" model="ir.actions.act_window">
             <field name="name">AUDIT 8 - Valoración de stock - sólo 2023</field>
             <field name="res_model">stock.valuation.layer</field>
             <field name="view_id" ref="stock.valuation.layer.tree"/>
@@ -54,7 +54,7 @@
             <field name="context">{}</field>
             <field name="view_id" ref="stock.valuation.layer.tree"/>
         </record>
-        <record id="audit_stock_valuation_2024" model="ir.actions.act_window">
+        <record id="stock.audit_stock_valuation_2024" model="ir.actions.act_window">
             <field name="name">AUDIT 8 - Valoración de stock - sólo 2024</field>
             <field name="res_model">stock.valuation.layer</field>
             <field name="view_id" ref="stock.valuation.layer.tree"/>
