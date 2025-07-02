@@ -239,7 +239,7 @@
                 [('state','in',('waiting','confirmed','assigned')),('picking_type_id.id','=',(36,2,6))]
             </field>
             <field name="context">{'group_by' :'state'}</field>
-            <field name="view_id" ref="stock.entregas.picking.tree"/>
+            <field name="view_id" ref="__export__.ir_ui_view_2331_e171f19e"/>
         </record>
         <record id="sid_sale_order_lines" model="ir.actions.act_window">
             <field name="name">Líneas de pedido</field>
