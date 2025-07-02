@@ -9,7 +9,7 @@
             <field name="domain" eval="['&amp;', ('active', '=', True), ('stage_id.is_won', '=', True)]"/>
             <field name="context">{'group_by': 'create_date:year'}</field>
         </record>
-        <record id="sale.audit_sales_2022_inv_2023" model="ir.actions.act_window">
+        <record id="audit_sales_2022_inv_2023" model="ir.actions.act_window">
             <field name="name">AUDIT 15 - Pedidos de 2022 - con facturas en 2023</field>
             <field name="res_model">sale.order</field>
             <field name="target">current</field>
@@ -19,7 +19,7 @@
             </field>
             <field name="context">{}</field>
         </record>
-        <record id="sale.audit_sales_2022_inv_2024" model="ir.actions.act_window">
+        <record id="audit_sales_2022_inv_2024" model="ir.actions.act_window">
             <field name="name">AUDIT 15 - Pedidos de 2023 - con facturas en 2024</field>
             <field name="res_model">sale.order</field>
             <field name="target">current</field>
